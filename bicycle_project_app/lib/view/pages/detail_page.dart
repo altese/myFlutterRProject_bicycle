@@ -1,11 +1,8 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:http/http.dart' as http;
-
 import '../../Model/message.dart';
 import '../../model/rent.dart';
 import '../component/chart.dart';
@@ -74,7 +71,8 @@ class _DetailPageState extends State<DetailPage>
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
                     snum,
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                 ),
               ],
@@ -83,15 +81,11 @@ class _DetailPageState extends State<DetailPage>
               children: [
                 Text(
                   sname,
-                  style: TextStyle(
-                    fontSize: 25,
-                  ),
+                  style: const TextStyle(fontSize: 25),
                 ),
               ],
             ),
-            SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 30),
             Container(
               height: 80,
               width: 350,
@@ -102,8 +96,8 @@ class _DetailPageState extends State<DetailPage>
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
                     child: Text(
                       '오늘 예상 총 대여량',
                       style: TextStyle(fontSize: 18),
@@ -133,8 +127,8 @@ class _DetailPageState extends State<DetailPage>
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(30, 0, 0, 0),
                     child: Text(
                       '현재 거치 수량',
                       style: TextStyle(fontSize: 18),

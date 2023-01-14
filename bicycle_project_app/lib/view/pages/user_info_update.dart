@@ -1,7 +1,6 @@
 import 'package:bicycle_project_app/Model/userRegisterStatic.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-
 import '../component/my_textfield.dart';
 
 class UserInfoUpdate extends StatefulWidget {
