@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../Model/station_static.dart';
 
-class Home2 extends StatefulWidget {
-  const Home2({super.key});
+class TotalPage extends StatefulWidget {
+  const TotalPage({super.key});
 
   @override
-  State<Home2> createState() => _Home2State();
+  State<TotalPage> createState() => _TotalPageState();
 }
 
-class _Home2State extends State<Home2> {
+class _TotalPageState extends State<TotalPage> {
   String name = '';
   late TextEditingController searchTf;
   late String temp; // 최저기온

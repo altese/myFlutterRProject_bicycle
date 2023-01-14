@@ -27,7 +27,6 @@ class _HomePageState extends State<HomePage> {
   late String next2;
   late String next3;
   late String next4;
-  late final ValueNotifier<List<Event>> _selectedEvents;
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
       .toggledOff; // Can be toggled on/off by longpressing a date
@@ -401,7 +400,7 @@ class _HomePageState extends State<HomePage> {
     print('baseTime: $baseTime');
     print('baseDate: $baseDate');
     var url = Uri.parse(
-        'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=$key&pageNo=1&numOfRows=1000&dataType=JSON&base_date=20230112&base_time=$baseTime&nx=61&ny=126');
+        'https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst?serviceKey=$key&pageNo=1&numOfRows=1000&dataType=JSON&base_date=$baseDate&base_time=$baseTime&nx=61&ny=126');
     var response = await http.get(url);
     var dataConvertedToJSON = json.decode(response.body);
 
@@ -446,7 +445,7 @@ class _HomePageState extends State<HomePage> {
       }
     }
 
-    print('---------- selectWeather: ${selectWeather} -------- \n');
+    print('---------- selectWeather: $selectWeather -------- \n');
 
     // static에 필요한 데이터 저장
     weatherStatic.REH = double.parse(selectWeather["REH"]['fcstValue']);

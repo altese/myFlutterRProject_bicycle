@@ -13,14 +13,14 @@ class HomePage extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: signUserOut,
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
           ),
         ],
       ),
       body: Center(
         child: Text(
-          'logged in!' + user.email!,
-          style: TextStyle(fontSize: 20),
+          'logged in!${user.email!}',
+          style: const TextStyle(fontSize: 20),
         ),
       ),
     );

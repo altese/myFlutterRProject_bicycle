@@ -2,7 +2,6 @@ import 'package:bicycle_project_app/Model/userRegisterStatic.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
 import '../component/my_button.dart';
 import '../component/my_textfield.dart';
 import '../component/square_tile.dart';
