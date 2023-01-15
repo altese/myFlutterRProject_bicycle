@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'package:bicycle_project_app/view/component/bar_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import '../Model/rent.dart';
-import 'component/chart.dart';
+import '../../Model/rent.dart';
+import '../component/chart.dart';
 
 class ChartPage extends StatefulWidget {
   const ChartPage({super.key});

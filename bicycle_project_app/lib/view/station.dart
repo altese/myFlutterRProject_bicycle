@@ -485,10 +485,10 @@ class _StationState extends State<Station> {
   // 버튼 클릭시 날씨정보 텍스트 필드로 가져오기
   getWeatherData() {
     setState(() {
-      temp.text = weatherStatic.TMN.toString();
-      atemp.text = weatherStatic.TMX.toString();
-      humidity.text = weatherStatic.REH.toString();
-      windspeed.text = weatherStatic.WSD.toString();
+      temp.text = WeatherStatic.TMN.toString();
+      atemp.text = WeatherStatic.TMX.toString();
+      humidity.text = WeatherStatic.REH.toString();
+      windspeed.text = WeatherStatic.WSD.toString();
     });
   }
 

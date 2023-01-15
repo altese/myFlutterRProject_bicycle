@@ -1,11 +1,11 @@
-import 'package:bicycle_project_app/view/chart_page.dart';
+import 'package:bicycle_project_app/view/pages/chart_page.dart';
 import 'package:bicycle_project_app/view/component/icons/my_flutter_app_icons.dart';
-import 'package:bicycle_project_app/view/google_map.dart';
-import 'package:bicycle_project_app/view/home_page.dart';
+import 'package:bicycle_project_app/view/pages/google_map_page.dart';
+import 'package:bicycle_project_app/view/pages/home_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'total_page.dart';
-import 'my_page.dart';
+import 'pages/total_page.dart';
+import 'pages/my_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -48,15 +48,6 @@ class _HomeState extends State<Home> {
         toolbarHeight: 50,
         // 그림자
         elevation: 0.5,
-        // leading: IconButton(
-        //   onPressed: () {
-        //     Drawer();
-        //   },
-        //   icon: const Icon(
-        //     Icons.menu,
-        //     color: Color(0xFF616161),
-        //   ),
-        // ),
         title: const Text(
           'BICYCLE',
           style: TextStyle(color: Colors.black),

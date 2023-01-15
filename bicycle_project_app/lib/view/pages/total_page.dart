@@ -6,7 +6,7 @@ import 'package:bicycle_project_app/view/pages/detail_page.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import '../Model/station_static.dart';
+import '../../Model/station_static.dart';
 
 class TotalPage extends StatefulWidget {
   const TotalPage({super.key});
@@ -85,10 +85,10 @@ class _TotalPageState extends State<TotalPage> {
     super.initState();
     total = '';
     searchTf = TextEditingController();
-    temp = weatherStatic.TMN.toString();
-    atemp = weatherStatic.TMX.toString();
-    humidity = weatherStatic.REH.toString();
-    windspeed = weatherStatic.WSD.toString();
+    temp = WeatherStatic.TMN.toString();
+    atemp = WeatherStatic.TMX.toString();
+    humidity = WeatherStatic.REH.toString();
+    windspeed = WeatherStatic.WSD.toString();
     data = [];
     pbike = [];
     pResult2 = [];

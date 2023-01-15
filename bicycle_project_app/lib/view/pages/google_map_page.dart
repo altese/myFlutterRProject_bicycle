@@ -48,7 +48,7 @@ class _SimpleMapState extends State<SimpleMap> {
     data = [];
     getJSONData();
 
-    _markers = [];
+    // _markers = [];
     latitude = ['37.52407', '37.47603', '37.49401', '37.50723'];
     longitude = ['127.0218', '127.1059', '127.0795', '127.0569'];
     selectedItem = 0;
@@ -63,7 +63,6 @@ class _SimpleMapState extends State<SimpleMap> {
         draggable: true,
         onTap: () => print("Marker!"),
         position: const LatLng(37.514575, 127.0495556)));
-    // }
   }
 
   @override
@@ -88,8 +87,6 @@ class _SimpleMapState extends State<SimpleMap> {
           alignment: Alignment.topRight,
           child: FloatingActionButton.extended(
             onPressed: () {
-              // getJSONData();
-              // test();
               Get.bottomSheet(
                 Container(
                   height: 250,
@@ -110,18 +107,10 @@ class _SimpleMapState extends State<SimpleMap> {
                             });
                           },
                           children: [
-                            Text(
-                              _valueList[0],
-                            ),
-                            Text(
-                              _valueList[1],
-                            ),
-                            Text(
-                              _valueList[2],
-                            ),
-                            Text(
-                              _valueList[3],
-                            ),
+                            Text(_valueList[0]),
+                            Text(_valueList[1]),
+                            Text(_valueList[2]),
+                            Text(_valueList[3]),
                           ],
                         ),
                       ),
@@ -131,9 +120,7 @@ class _SimpleMapState extends State<SimpleMap> {
                               int.parse(stationNum[selectedItem]);
                           clickButton();
                         },
-                        child: const Text(
-                          'OK',
-                        ),
+                        child: const Text('OK'),
                       ),
                     ],
                   ),
@@ -170,7 +157,7 @@ class _SimpleMapState extends State<SimpleMap> {
 
   // 내 위치정보 가져오기
   Future<Position> getCurrentLocation() async {
-    LocationPermission permission = await Geolocator.requestPermission();
+    // LocationPermission permission = await Geolocator.requestPermission();
     Position position = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.high);
     return position;
@@ -199,9 +186,7 @@ class _SimpleMapState extends State<SimpleMap> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Row(
                         children: [
                           Text(
@@ -224,15 +209,11 @@ class _SimpleMapState extends State<SimpleMap> {
                                     : StationStatic.stationNum == 2384
                                         ? StationStatic.parking2384
                                         : StationStatic.parking2342,
-                            style: const TextStyle(
-                              fontSize: 20,
-                            ),
+                            style: const TextStyle(fontSize: 20),
                           ),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
+                      const SizedBox(height: 20),
                       Row(
                         children: [
                           Text(
@@ -241,9 +222,7 @@ class _SimpleMapState extends State<SimpleMap> {
                               fontSize: 20,
                             ),
                           ),
-                          const SizedBox(
-                            width: 30,
-                          ),
+                          const SizedBox(width: 30),
                           TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, '/station');
@@ -252,9 +231,7 @@ class _SimpleMapState extends State<SimpleMap> {
                             },
                             child: const Text(
                               '예측하러가기',
-                              style: TextStyle(
-                                fontSize: 20,
-                              ),
+                              style: TextStyle(fontSize: 20),
                             ),
                           ),
                         ],
@@ -264,14 +241,10 @@ class _SimpleMapState extends State<SimpleMap> {
                   )),
             );
           },
-          infoWindow: InfoWindow(
-            title: _valueList[selectedItem],
-          ),
+          infoWindow: InfoWindow(title: _valueList[selectedItem]),
           position: LatLng(
             double.parse(latitude[selectedItem]),
-            double.parse(
-              longitude[selectedItem],
-            ),
+            double.parse(longitude[selectedItem]),
           ),
         ),
       );
